@@ -1,5 +1,7 @@
-The Atherton  - Dr. A. Santos Ave., Parañaque City (Ready for Occupancy)
-
+Name: The Atherton  
+Status: Ready for Occupancy 
+Location: Paranaque City
+Specific Location: Dr. A. Santos Ave., Parañaque City 
 Price Range: PHP4,030,000 - PHP7,968,000
 Units: 1BR, 2BR, 
 Land Area: 17,623 sqm.

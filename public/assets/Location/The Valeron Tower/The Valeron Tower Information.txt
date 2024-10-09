@@ -1,5 +1,7 @@
-The Valeron Tower - C-5 corner P.E. Antonio St., Brgy. Ugong, Pasig City (New)
-
+Name: The Valeron Tower 
+Status: New
+Location: Pasig City
+Specific Location: C-5 corner P.E. Antonio St., Brgy. Ugong, Pasig City 
 Price Range: PHP7,513,000 - PHP17,924,000
 Units: 1BR, 2BR, 3BR, STUDIO
 Land Area: 8,390 sqm.
@@ -34,7 +36,8 @@ General Facilities
 - Coworking Space
 
 Buildings
-The Valeron Tower (High Rise Condominiums)
+Name: The Valeron Tower 
+Development Type: High Rise Condominiums
      Residential : 48 Levels
      Basement Parking : 2 Level
      Commercial Floor : 1 Level

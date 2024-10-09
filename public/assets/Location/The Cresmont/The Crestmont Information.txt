@@ -1,5 +1,7 @@
-The Crestmont - Panay Ave., South Triangle, Quezon City (Under Construction)
-
+Name: The Crestmont 
+Status: Under Construction
+Location: Quezon City
+Specific Location: Panay Ave., South Triangle, Quezon City
 Price Range: PHP6,271,000 - PHP15,106,000
 Units: 1BR ,2BR, 3br 
 Land Area: 3,000 sqm.

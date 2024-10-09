@@ -1,5 +1,7 @@
-The Calinea Tower- M.H. Del Pilar St., Grace Park, Caloocan City (Under Construction)
-
+Name: The Calinea Tower
+Status: Under Construction
+Location: Caloocan City 
+Specific Location; M.H. Del Pilar St., Grace Park, Caloocan City
 Price Range: PHP5,325,000 - PHP15,098,000
 Units: 1BR, 2BR, 3BR, STUDIO
 Land Area: 7,472 sqm.
@@ -24,7 +26,8 @@ General Facilities
 - Internet in Units and Common Areas
 
 Buildings
-The Calinea Tower (High Rise Condominiums)
+Name: The Calinea Tower 
+Development Type: High Rise Condominiums
      Residential : 48 Levels
      Podium Parking : 10 Level
      Commercial Floor : 1 Level

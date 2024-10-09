@@ -1,6 +1,6 @@
 Name: Moncello Crest
 Status: New
-Locaition: Tuba, Benguet
+Location: Tuba, Benguet
 Specific Location: Sitio Bato, via Bontiway, Brgy. Poblacion, Tuba, Benguet
 Price Range: PHP7,750,000 - PHP17,400,000
 Units: 1BR, 2BR, STUDIO

@@ -1,5 +1,7 @@
-The Campden Place - Dominga St., Malate, Manila (Under Construction)
-
+Name: The Campden Place 
+Status: Under Construction
+Location: Manila 
+Specific Location: Dominga St., Malate, Manila 
 Price Range: PHP4,896,000 - PHP9,441,000
 Units: STUDIO
 Land Area: 2,382 sqm.

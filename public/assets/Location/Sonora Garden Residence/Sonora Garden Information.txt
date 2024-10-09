@@ -1,5 +1,7 @@
-Sonora Garden Residences - Alabang–Zapote Road, Talon Tres, Las Pinas (Under Construction)
-
+Name: Sonora Garden Residences 
+Status: Under Construction
+Location: Las Pinas
+Specific Location: Alabang–Zapote Road, Talon Tres, Las Pinas
 Price Range: PHP4,444,000 - PHP10,934,000
 Units: 1BR, 2BR, 3BR
 Land Area: 14,492 sqm.
@@ -28,17 +30,20 @@ General Facilities
 - Water Station
 
 Buildings
-Cadence (High Rise Condominiums)
+Name: Cadence 
+Development Type: High Rise Condominiums
      Residential : 39 Levels
      Commercial Floor : 1 Level 
      Basement Parking : 4 Level
 
-Liran (High Rise Condominiums)
+Name: Liran 
+Development Type: High Rise Condominiums
      Residential : 41 Levels
      Commercial Floor : 1 Level 
      Basement Parking : 4 Level
 
-Stellan (Mid Rise Condominiums)
+Name: Stellan 
+Development Type : Mid Rise Condominiums
      Residential : 15 Levels
      Basement Parking : 4 Level
 

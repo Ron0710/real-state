@@ -1,5 +1,7 @@
-The Erin Heights - Commonwealth Ave. corner Tandang Sora Ave., Matandang Balara (Under Construction)
-
+Name: The Erin Heights 
+Status: Under Construction 
+Location: Quezon City
+Specific Location: Commonwealth Ave. corner Tandang Sora Ave., Matandang Balara 
 Price Range: PHP4,881,000 - PHP29,842,000
 Units: 2BR, 3BR, STUDIO
 Land Area: 6,103 sqm.
@@ -28,7 +30,8 @@ General Facilities
 - Coworking Space
 
 Buildings
-The Erin Heights (High Rise Condominiums)
+Name: The Erin Heights 
+Development Type: High Rise Condominiums
      Residential : 54 Levels
      Basement Parking : 8 Level
 

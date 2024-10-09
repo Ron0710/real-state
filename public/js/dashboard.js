@@ -37,79 +37,168 @@ const properties = [
      "Privacy Policy"
  ]
 // Array of location objects with names and paths
-const locations = [
-    { location: "Caloocan", name: "Caloocan", path: "assets/Allegra Garden Place View.png" },
-    { location: "Las Pinas", name: "Las Pinas", path: "path/to/las_pinas.jpg" },
-    { location: "Makati", name: "Makati", path: "path/to/makati.jpg" },
-    { location: "Mandaluyong", name: "Mandaluyong", path: "path/to/mandaluyong.jpg" },
-    { location: "Manila", name: "Manila", path: "path/to/manila.jpg" },
-    { location: "Pasay", name: "Pasay", path: "path/to/pasay.jpg" },
-    { location: "Pasig", name: "Pasig", path: "path/to/pasig.jpg" },
-    { location: "Paranaque", name: "Paranaque", path: "path/to/paranaque.jpg" },
-    { location: "Quezon City", name: "Quezon City", path: "path/to/quezon_city.jpg" },
-    { location: "San Juan, Batangas", name: "San Juan, Batangas", path: "path/to/san_juan_batangas.jpg" },
-    { location: "Taguig", name: "Taguig", path: "path/to/taguig.jpg" },
-    { location: "Tuba, Benguet", name: "Tuba, Benguet", path: "path/to/tuba_benguet.jpg" }
-]
+
 
 
 // Event listener for when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+    const locations = [
+        { location: "Caloocan City", name: "The Calinea Tower", path: "assets/Location/Residences View/The Calinea Tower View.jpg" },
+        { location: "Las Pinas", name: "Sonora Garden Residence", path: "assets/Location/Residences View/Sonora Garden Residences View.jpg" },
+        { location: "Makati City", name: "Fortis Residence", path: "assets/Location/Residences View/Fortis Residence View.jpg" },
+        { location: "Mandaluyong City", name: "Sage Residence", path: "assets/Location/Residences View/Sage Residence View.jpg" },
+        { location: "Manila", name: "The Campden Place", path: "assets/Location/Residences View/The Campden Place View.png" },
+        { location: "Pasay City", name: "Anissa Heights", path: "assets/Location/Residences View/Anissa Heights View.jpg" },
+        { location: "Pasig", name: "Allergra Garden Place", path: "assets/Location/Residences View/Allegra Garden Place View.png"},
+        { location: "Pasig", name: "Prisma Residence", path: "assets/Location/Residences View/Prisma Residence View.png"},
+        { location: "Pasig City", name: "Satory Residence", path: "assets/Location/Residences View/Satori Residence View.png"},
+        { location: "Pasig City", name: "The Valeron Tower", path: "assets/Location/Residences View/The Valeron Tower View.jpg"},
+        { location: "Paranaque", name: "Oak Harbor Residence", path: "assets/Location/Residences View/Oak Harbor Residence View.jpg" },
+        { location: "Paranaque City", name: "The Atherton", path: "assets/Location/Residences View/The Atherton Views.jpg" },
+        { location: "Quezon City", name: "One Delta Terraces", path: "assets/Location/Residences View/One Delta Terraces View.jpg" },
+        { location: "Quezon City", name: "The Crestmont", path: "assets/Location/Residences View/The Crestmont View.jpg" },
+        { location: "Quezon City", name: "The Erin Heights", path: "assets/Location/Residences View/The Erin Heights View.png" },
+        { location: "Quezon City", name: "The Oriana", path: "assets/Location/Residences View/The Oriana View.png" },
+        { location: "San Juan, Batangas", name: "Solmera Coast", path: "assets/Location/Residences View/Solmera Coast View.jpg" },
+        { location: "Taguig City", name: "Mulberry Place", path: "assets/Location/Residences View/Malberry Place View.jpg" },
+        { location: "Tuba, Benguet", name: "Moncello Crest", path: "assets/Location/Residences View/Moncello Crest View.jpg" }
+    ]
+    
     const searchInput = document.getElementById("searchInput");
     const suggestionsContainer = document.getElementById("suggestionsContainer");
     const locationImageContainer = document.getElementById("locationImageContainer");
     const locationImage = document.getElementById("locationImage");
 
-    // Function to show suggestions based on input
-    function showSuggestions() {
-        const inputValue = searchInput.value.toLowerCase();
-        console.log(inputValue); // Log the input value
+    // Function to fetch properties based on selected dropdown value and input
+    function fetchProperties() {
+        const dropdown = document.getElementById('locationDropdown');
+        const selectedValue = dropdown.value; // Get the selected dropdown value
+        const searchInputValue = searchInput.value.toLowerCase(); // Get the input text and convert to lowercase
         suggestionsContainer.innerHTML = ''; // Clear previous suggestions
 
-        if (inputValue) {
-            const filteredLocations = locations.filter(location => 
-                location.name.toLowerCase().includes(inputValue)
-            );
+        if (selectedValue && searchInputValue) {
+            fetch(`/api/properties?filter=${selectedValue}&search=${searchInputValue}`) // Fetch data from API
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json(); // Parse the JSON from the response
+                })
+                .then(data => {
+                    // Create an array to track displayed suggestions and avoid duplicates
+                    const displayedSuggestions = [];
 
-            // Show suggestions
-            filteredLocations.forEach(location => {
-                const suggestionItem = document.createElement('div');
-                suggestionItem.textContent = location.name; // Use the name property for display
-                suggestionItem.classList.add('suggestion-item');
+                    if (data.length > 0) {
+                        // Show suggestions based on the fetched data
+                        data.forEach(property => {
+                            const suggestionText = property[selectedValue];
 
-                // Click event to fill the input with the selected suggestion
-                suggestionItem.onclick = () => {
-                    searchInput.value = location.name; // Fill the input with the selected suggestion name
-                    suggestionsContainer.innerHTML = ''; // Clear suggestions
+                            // Check if the suggestion is already displayed
+                            if (!displayedSuggestions.includes(suggestionText)) {
+                                displayedSuggestions.push(suggestionText); // Add to array to track displayed suggestions
+                                
+                                const suggestionItem = document.createElement('div');
+                                suggestionItem.textContent = suggestionText; // Use the selected property attribute
+                                suggestionItem.classList.add('suggestion-item');
 
-                    // Show the corresponding image
-                    locationImage.src = location.path;
-                    locationImageContainer.style.display = "block"; // Show the image container
-                };
+                                // Click event to fill the input with the selected suggestion
+                                suggestionItem.onclick = () => {
+                                    searchInput.value = suggestionText; // Set input value to the suggestion
+                                    suggestionsContainer.innerHTML = ''; // Clear suggestions
+                                };
 
-                suggestionsContainer.appendChild(suggestionItem);
-            });
+                                suggestionsContainer.appendChild(suggestionItem); // Append suggestion
+                            }
+                        });
 
-            // Show the suggestions container if there are any
-            suggestionsContainer.style.display = filteredLocations.length ? 'block' : 'none';
+                        // Show suggestions container only if there are valid suggestions
+                        if (suggestionsContainer.childNodes.length > 0) {
+                            suggestionsContainer.style.display = 'block'; // Show suggestions
+                        } else {
+                            suggestionsContainer.innerHTML = '<div>No results found</div>'; // Show no results
+                        }
+                    } else {
+                        suggestionsContainer.innerHTML = '<div>No results found</div>'; // Show no results
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching properties:', error); // Log error
+                    suggestionsContainer.innerHTML = '<div>Error fetching data</div>'; // Show error message
+                });
         } else {
-            suggestionsContainer.style.display = 'none'; // Hide if input is empty
+            suggestionsContainer.style.display = 'none'; // Hide if no valid input
         }
     }
 
-    // Event listener for search input
-    searchInput.addEventListener("input", showSuggestions);
+    // Event listener for input change to fetch properties
+    searchInput.addEventListener("input", fetchProperties);
 
-    // Optional: Hide image container if input is cleared
-    searchInput.addEventListener("input", () => {
-        if (!searchInput.value) {
-            locationImageContainer.style.display = "none"; // Hide the image container
-        }
+    // Event listener for dropdown change to trigger fetching properties
+    document.getElementById('locationDropdown').addEventListener('change', () => {
+        // Fetch properties again when dropdown changes to refresh suggestions
+        fetchProperties();
     });
 
     const tableBody = document.getElementById('tableBody');
+    let currentIndex = 0;
 
-    // Function to render table data
+    // Function to show the current image
+    function showImage(index) {
+        const locationContainer = document.getElementById('locationImageContainer');
+
+        const locationImage = document.getElementById('locationImage');
+  
+        locationImage.src = locations[index].path;
+
+        // Show the container if it's not visible
+        if (locationContainer.style.display === 'none') {
+            locationContainer.style.display = 'block';
+        }
+    }
+
+    // Function to show the loading overlay
+    function showLoading() {
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        loadingOverlay.style.display = 'flex'; // Show loading overlay
+    }
+
+    // Function to hide the loading overlay
+    function hideLoading() {
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        loadingOverlay.style.display = 'none'; // Hide loading overlay
+    }
+
+    // Function to show the next image
+    window.showNextImage = function () {
+        showLoading(); // Show loading overlay
+        currentIndex = (currentIndex + 1) % locations.length; // Loop back to the start
+        showImage(currentIndex);
+        hideLoading(); 
+        setTimeout(() => {
+         // Hide loading overlay after displaying the image
+        }, 1000); // Delay of 1 second for loading
+    };
+
+    // Function to show the previous image
+    window.showPreviousImage = function () {
+        showLoading(); // Show loading overlay
+        currentIndex = (currentIndex - 1 + locations.length) % locations.length; // Loop to the end
+        showImage(currentIndex);
+        hideLoading();
+        setTimeout(() => {
+            // Hide loading overlay after displaying the image
+        }, 1000); // Delay of 1 second for loading
+    };
+
+    // Automatically move to the next image every 5 seconds
+    setInterval(showNextImage, 5000); // Change every 5 seconds
+
+    // Initially display the first image
+    showImage(currentIndex);
+    function renderInformation(){
+        const locationImageContainer = document.getElementById("locationImageContainer");
+    }
+
     function renderTable() {
         // Clear existing rows
         tableBody.innerHTML = '';

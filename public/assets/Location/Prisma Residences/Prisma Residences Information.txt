@@ -1,5 +1,6 @@
 Name : Prisma Residence 
 Status: Ready for Occupancy
+Location: Pasig
 Specific Location: Pasig Boulevard, Brgy. Bagong Ilog 
 Price Range: PHP4,562,000 - PHP12,174,000
 Units: 1BR, 2BR
