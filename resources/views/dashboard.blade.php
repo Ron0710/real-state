@@ -21,7 +21,7 @@
                 
                 </td>
                 <td>
-                    <img src="{{ asset('assets/call.png') }}" alt="Call Icon"> <!-- Second Image -->
+                    <img src="{{ asset('assets/call.png') }}"> <!-- First Image -->
                     <p>123-4567</p>
                 </td>
             </tr>
@@ -51,8 +51,8 @@
     </div>
 <!---->
     <main class="maincontent" id="main">
-        <div style="flex: 0 0 100%; background-image: url('{{ asset('assets/Alveobg2.jpg') }}'); background-size: cover; background-position: center; height: 100vh;">
             <div class="container">
+                <img src="{{ asset('assets/Alveo.png') }}" style="height:100%; width:100%" > <!-- Second Image -->
                 <div class="content">
                     <h1>ALVEO LAND</h1>
                     <h4>LIVE WELL ACROSS THE PHILIPPINES</h4>
@@ -73,11 +73,13 @@
                         </select>
                         <input type="text" placeholder="Search any location/residence" aria-label="Search" id="searchInput">
                         <div class="suggestions" id="suggestionsContainer"></div>
+
                     </div>
                 </div>
-                
-                
-            </div>
+                <div class="arrowsubmit">
+                    <img src="{{ asset('assets/right-arrow.png') }}" > 
+                </div>
+               <!-- Second Image -->
      
         <div id="locationImageContainer" class="location-image-container">
             <div id="loadingOverlay" class="loading-overlay" style="display: none;">

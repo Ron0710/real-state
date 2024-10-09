@@ -68,7 +68,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const suggestionsContainer = document.getElementById("suggestionsContainer");
     const locationImageContainer = document.getElementById("locationImageContainer");
     const locationImage = document.getElementById("locationImage");
+    let currentIndex = 0;
 
+    function readSearchInput() {
+        const searchInputValue = searchInput.value.trim(); // Get the current value of the search input
+        console.log(`Search Input: ${searchInputValue}`); // Log the current search input value
+        return searchInputValue; // Return the current search input value
+    }
+    
+    // Event listener for input change
+    searchInput.addEventListener("input", () => {
+        const currentSearchValue = readSearchInput(); // Call the function to read the input
+        // You can add additional logic here to use the currentSearchValue, like fetching suggestions
+    });
+    
+    // Event listener for dropdown change to trigger displaying suggestions
+    document.getElementById('locationDropdown').addEventListener('change', () => {
+        displaySuggestions(); // Refresh suggestions based on new dropdown selection
+    });
+    
+    // Add click event listener to the suggestions container
+    document.getElementById('suggestionsContainer').addEventListener('click', () => {
+        const selectedValue = readSearchInput(); // Get the current search input value
+        const locationIndex = locations.findIndex(loc => loc.location.toLowerCase() === selectedValue.toLowerCase());
+    
+        if (locationIndex !== -1) {
+            currentIndex = locationIndex; // Set the current index to the found index
+            showImage(currentIndex); // Show the image corresponding to the found location
+        } else {
+            console.log("Location not found");
+        }
+    });
     // Function to fetch properties based on selected dropdown value and input
     function fetchProperties() {
         const dropdown = document.getElementById('locationDropdown');
@@ -140,45 +170,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const tableBody = document.getElementById('tableBody');
-    let currentIndex = 0;
 
     // Function to show the current image
     function showImage(index) {
         const locationContainer = document.getElementById('locationImageContainer');
-
         const locationImage = document.getElementById('locationImage');
-  
         locationImage.src = locations[index].path;
-
+    
         // Show the container if it's not visible
         if (locationContainer.style.display === 'none') {
             locationContainer.style.display = 'block';
         }
     }
-
+    
     // Function to show the loading overlay
     function showLoading() {
         const loadingOverlay = document.getElementById('loadingOverlay');
         loadingOverlay.style.display = 'flex'; // Show loading overlay
     }
-
+    
     // Function to hide the loading overlay
     function hideLoading() {
         const loadingOverlay = document.getElementById('loadingOverlay');
         loadingOverlay.style.display = 'none'; // Hide loading overlay
     }
-
+    
     // Function to show the next image
     window.showNextImage = function () {
         showLoading(); // Show loading overlay
         currentIndex = (currentIndex + 1) % locations.length; // Loop back to the start
         showImage(currentIndex);
-        hideLoading(); 
+        hideLoading();
         setTimeout(() => {
-         // Hide loading overlay after displaying the image
+            // Hide loading overlay after displaying the image
         }, 1000); // Delay of 1 second for loading
     };
-
+    
     // Function to show the previous image
     window.showPreviousImage = function () {
         showLoading(); // Show loading overlay
@@ -189,10 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Hide loading overlay after displaying the image
         }, 1000); // Delay of 1 second for loading
     };
-
+    
     // Automatically move to the next image every 5 seconds
     setInterval(showNextImage, 5000); // Change every 5 seconds
-
     // Initially display the first image
     showImage(currentIndex);
     function renderInformation(){
