@@ -14,3 +14,6 @@ Route::get('/properties', [PropertyController::class, 'index']);
 
 // Define the API route
 Route::get('/searchlocation', [LocationController::class, 'search']);
+Route::get('/api/properties', function () {
+    return Http::get('https://localhost:8000/properties');
+});

@@ -23,5 +23,8 @@ class Property extends Model
         'land_area',
         'development_type',
         'architectural_theme',
+        'path',
+        'view',
+        'features'
     ];
 }

@@ -18,6 +18,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 29,
                 'basement_parking_levels' => 5,
+                'path'=> 'assets/Location/Anissa Heights/Building/Anissa Heights Building.jpg',
             ],
             [
                 'property_name' => 'Allegra Garden Place',
@@ -25,6 +26,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 55,
                 'basement_parking_levels' => 5,
+                'path'=>'assets/Location/Allegra Garden Place/Building/Amina Building.jpg',
             ],
             [
                 'property_name' => 'Allegra Garden Place',
@@ -32,13 +34,15 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 55,
                 'basement_parking_levels' => 5,
+                'path'=>'assets/Location/Allegra Garden Place/Building/Soraya Building.jpg',
             ],
             [
                 'property_name' => 'Fortis Residence',
                 'name' => 'Fortis Residence',
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 36,
-                'basement_parking_levels' => null, // Set to null if there's no value
+                'basement_parking_levels' => null,
+                'path'=>'assets/Location/Fortis Residences/Building/Fortis Residence Building.jpg',
             ],
             [
                 'property_name' => 'Moncello Crest',
@@ -46,6 +50,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'Leisure Residences',
                 'residential_levels' => 18,
                 'basement_parking_levels' => 4,
+                'path' =>'assets/Location/Moncello Crest/Building/Blanca Building.jpg',
             ],
             [
                 'property_name' => 'Moncello Crest',
@@ -60,6 +65,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'Leisure Residences',
                 'residential_levels' => 20,
                 'basement_parking_levels' => 9,
+                'path' =>'assets/Location/Moncello Crest/Building/Ciela Building.jpg',
             ],
             [
                 'property_name' => 'Mulberry Place',
@@ -67,6 +73,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 18,
                 'basement_parking_levels' => null, // No basement parking specified
+                'path'=>'assets/Location/Mulberry Place/Building/Shantung Building.jpg',
             ],
             [
                 'property_name' => 'Mulberry Place',
@@ -74,6 +81,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'Mid Rise Condominiums',
                 'residential_levels' => 6,
                 'basement_parking_levels' => 2,
+                'path'=>'assets/Location/Mulberry Place/Building/Bengaline Building.jpg',
             ],
             [
                 'property_name' => 'Mulberry Place',
@@ -81,6 +89,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'Mid Rise Condominiums',
                 'residential_levels' => 6,
                 'basement_parking_levels' => 2,
+                'path'=>'assets/Location/Mulberry Place/Building/Cochine Building.jpg',
             ],
             [
                 'property_name' => 'Mulberry Place',
@@ -88,6 +97,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'Mid Rise Condominiums',
                 'residential_levels' => 6,
                 'basement_parking_levels' => 2,
+                'path'=>'assets/Location/Mulberry Place/Building/Dui Building.jpg',
             ],
             [
                 'property_name' => 'Mulberry Place',
@@ -95,6 +105,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 6,
                 'basement_parking_levels' => null, // No basement parking specified
+                'path'=>'assets/Location/Mulberry Place/Building/Paisley Building.jpg',
             ],
             [
                 'property_name' => 'Mulberry Place',
@@ -102,6 +113,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'Mid Rise Condominiums',
                 'residential_levels' => 6,
                 'basement_parking_levels' => 2,
+                'path'=>'',
             ],
             [
                 'property_name' => 'Oak Harbor Residences',
@@ -111,6 +123,7 @@ class BuildingSeeder extends Seeder
                 'basement_parking_levels' => 1,
                 'podium_parking_levels' => 1,
                 'lower_ground_floor_parking_levels' => 1,
+                'path'=>'assets/Location/Oak Harbor Residences/Building/Lauderdale Building.jpg',
             ],
             [
                 'property_name' => 'Oak Harbor Residences',
@@ -120,6 +133,7 @@ class BuildingSeeder extends Seeder
                 'basement_parking_levels' => 1,
                 'podium_parking_levels' => 1,
                 'lower_ground_floor_parking_levels' => null, // Not specified
+                'path'=>'assets/Location/Oak Harbor Residences/Building/Westport Building.jpg',
             ],
             [
                 'property_name' => 'Oak Harbor Residences',
@@ -129,6 +143,7 @@ class BuildingSeeder extends Seeder
                 'basement_parking_levels' => 1,
                 'podium_parking_levels' => 1,
                 'lower_ground_floor_parking_levels' => null, // Not specified
+                'path'=>'assets/Location/Oak Harbor Residences/Building/Aston Building.jpg',
             ],
             [
                 'property_name' => 'One Delta Terraces',
@@ -137,6 +152,7 @@ class BuildingSeeder extends Seeder
                 'residential_levels' => 51,
                 'basement_parking_levels' => 6,
                 'podium_parking_levels' => 4,
+                'path'=>'assets/Location/One Delta Terraces/One Delta Terraces View.jpg',
             ],
             [
                 'property_name' => 'Prisma Residence',
@@ -144,6 +160,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 42,
                 'basement_parking_levels' => 6,
+                'path'=>'assets/Location/Prisma Residences/Building/Astra Building.jpg',
             ],
             [
                 'property_name' => 'Prisma Residence',
@@ -151,6 +168,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 41,
                 'basement_parking_levels' => 6,
+                'path'=>'assets/Location/Prisma Residences/Building/Celeste Building.jpg',
             ],
             [
                 'property_name' => 'Prisma Residence',
@@ -158,6 +176,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 45,
                 'basement_parking_levels' => 6,
+                'path'=>'',
             ],
             [
                 'property_name' => 'Sage Residence',
@@ -165,6 +184,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 49,
                 'basement_parking_levels' => 8,
+                'path'=>'assets/Location/Sage Residences/Building/Sage Residence Building.jpg',
             ],
             [
                 'property_name' => 'Satory Residence',
@@ -172,6 +192,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 14,
                 'basement_parking_levels' => 2,
+                'path'=>'assets/Location/Satori Residences/Building/Hacana Building.jpg',
             ],
             [
                 'property_name' => 'Satory Residence',
@@ -179,6 +200,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 15,
                 'basement_parking_levels' => 2,
+                'path'=>'assets/Location/Satori Residences/Building/Lana Building.jpg',
             ],
             [
                 'property_name' => 'Satory Residence',
@@ -186,6 +208,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 14,
                 'basement_parking_levels' => 2,
+                'path'=>'assets/Location/Satori Residences/Building/Rahu Building.jpg',
             ],
             [
                 'property_name' => 'Satory Residence',
@@ -193,6 +216,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 15,
                 'basement_parking_levels' => 2,
+                'path'=>'assets/Location/Satori Residences/Building/Yasu Building.jpg',
             ],
             [
                 'property_name' => 'Satory Residence',
@@ -200,6 +224,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'High Rise Condominiums',
                 'residential_levels' => 15,
                 'basement_parking_levels' => 1,
+                'path'=>'assets/Location/Satori Residences/Building/Amani Building.jpg',
             ],
             [
                 'property_name' => 'Solmera Coast',
@@ -208,6 +233,7 @@ class BuildingSeeder extends Seeder
                 'residential_levels' => 6,
                 'basement_parking_levels' => 1,
                 'podium_parking_levels' => 5,
+                'path'=>'assets/Location/Solmera Coast/Building/Matahari Building.jpg',
             ],
             [
                 'property_name' => 'Solmera Coast',
@@ -215,6 +241,7 @@ class BuildingSeeder extends Seeder
                 'development_type' => 'Mid Rise Condominiums',
                 'residential_levels' => 6,
                 'basement_parking_levels' => 1,
+                'path'=>'',
             ],
             [
                 'property_name' => 'Solmera Coast',
@@ -223,6 +250,7 @@ class BuildingSeeder extends Seeder
                 'residential_levels' => null,
                 'basement_parking_levels' => null,
                 'podium_parking_levels' => null,
+                'path'=>'',
             ],
             [
                 'property_name' => 'Solmera Coast',
@@ -231,6 +259,7 @@ class BuildingSeeder extends Seeder
                 'residential_levels' => null,
                 'basement_parking_levels' => null,
                 'podium_parking_levels' => null,
+                'path'=>'',
             ],
             [
                 'property_name' => 'Solmera Coast',
@@ -239,6 +268,7 @@ class BuildingSeeder extends Seeder
                 'residential_levels' => null,
                 'basement_parking_levels' => null,
                 'podium_parking_levels' => null,
+                'path'=>'',
             ],
             [
                 'property_name' => 'Sonora Garden Residences',
@@ -248,6 +278,7 @@ class BuildingSeeder extends Seeder
                 'commercial_levels' => 1,
                 'basement_parking_levels' => 4,
                 'podium_parking_levels' => null,
+                'path'=>'assets/Location/Sonora Garden Residence/Building/Cadence.jpg',
             ],
             [
                 'property_name' => 'Sonora Garden Residences',
@@ -257,6 +288,7 @@ class BuildingSeeder extends Seeder
                 'commercial_levels' => 1,
                 'basement_parking_levels' => 4,
                 'podium_parking_levels' => null,
+                'path'=>'assets/Location/Sonora Garden Residence/Building/Liran.jpg',
             ],
             [
                 'property_name' => 'Sonora Garden Residences',
@@ -265,6 +297,7 @@ class BuildingSeeder extends Seeder
                 'residential_levels' => 15,
                 'basement_parking_levels' => 4,
                 'podium_parking_levels' => null,
+                'path'=>'assets/Location/Sonora Garden Residence/Building/Stellan.jpg',
             ],
             [
                 'property_name' => 'The Atherton',
@@ -274,6 +307,7 @@ class BuildingSeeder extends Seeder
                 'commercial_levels' => null,
                 'basement_parking_levels' => null,
                 'podium_parking_levels' => null,
+                'path'=>'',
             ],
             [
                 'property_name' => 'The Calinea Tower',
@@ -283,6 +317,7 @@ class BuildingSeeder extends Seeder
                 'commercial_levels' => 1,
                 'basement_parking_levels' => null,
                 'podium_parking_levels' => 10,
+                'path'=>'assets/Location/The Calinea Tower/Building/The Calinea Tower Building.jpg',
             ],
             [
                 'property_name' => 'The Campden Place',
@@ -292,6 +327,7 @@ class BuildingSeeder extends Seeder
                 'commercial_levels' => null,
                 'basement_parking_levels' => null,
                 'podium_parking_levels' => 5,
+                'path'=>'assets/Location/The Camden Place/Building/The Camden Place Building.jpg',
             ],
             [
                 'property_name' => 'The Crestmont',
@@ -301,6 +337,7 @@ class BuildingSeeder extends Seeder
                 'commercial_levels' => null,
                 'basement_parking_levels' => 7,
                 'podium_parking_levels' => null,
+                'path'=>'assets/Location/The Cresmont/Building/The Crestmont Building.jpg',
             ],
             [
                 'property_name' => 'The Erin Heights',
@@ -310,6 +347,7 @@ class BuildingSeeder extends Seeder
                 'commercial_levels' => null,
                 'basement_parking_levels' => 8,
                 'podium_parking_levels' => null,
+                'path'=>'',
             ],
             [
                 'property_name' => 'The Erin Heights',
@@ -319,6 +357,7 @@ class BuildingSeeder extends Seeder
                 'commercial_levels' => null,
                 'basement_parking_levels' => 8,
                 'podium_parking_levels' => null,
+                'path'=>'assets/Location/The Erin Heights/Building/The Erin Heights Building.jpg',
             ],
             [
                 'property_name' => 'The Valeron Tower',
@@ -328,6 +367,7 @@ class BuildingSeeder extends Seeder
                 'commercial_levels' => 1,
                 'basement_parking_levels' => 2,
                 'podium_parking_levels' => 6,
+                'path'=>'',
             ],
             
             

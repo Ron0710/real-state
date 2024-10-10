@@ -76,25 +76,91 @@
 
                     </div>
                 </div>
-                <div class="arrowsubmit">
-                    <img src="{{ asset('assets/right-arrow.png') }}" > 
+                <div class="arrowsubmit" onclick="arrowFetch()">
+                    <img src="{{ asset('assets/right-arrow.png') }}">
                 </div>
-               <!-- Second Image -->
-     
-        <div id="locationImageContainer" class="location-image-container">
+                <div id="popupContainer2" class="popup2">
+                    <div class="popup-content2">
+                        <span class="close2" onclick="hidePopup2()">&times;</span>
+                        <div id="propertyDataContainer">
+                            <div class="popup-content-container">
+                                <div class="popup-left">
+                                    <div style="display:flex">
+                                        <h2 class="popup-title"></h2>
+                                    </div>
+                                    <img class="popup-image" alt="" onmouseover="showEnlargedImage(this)" onmouseout="hideEnlargedImage()">
+                                    <img class="popup-view" alt="" onmouseover="showEnlargedImage(this)" onmouseout="hideEnlargedImage()">
+                                </div>
+                                <div class="popup-right">
+                                    <table class="popup-table">
+                                        <tbody id="propertyTableBody">
+                                            <tr>
+                                                <td>Location</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Specific Location</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Price Range</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Units</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Land Area</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Development Type</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Architectural Theme</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Status</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="down-arrow-container">
+                        <div class="down-arrow" onclick="scrollDown()"></div>
+                    </div>
+                </div>
+                
+                <div id="enlargedImageContainer" class="enlarged-image-container" style="display: none;">
+                    <img id="enlargedImage" src="" alt="Enlarged Image">
+                </div>
+              
+               <!-- 
+             <div id="locationImageContainer" class="location-image-container">
             <div id="loadingOverlay" class="loading-overlay" style="display: none;">
                 <dotlottie-player src="https://lottie.host/27fd954f-f7a6-449c-815b-620286fa68e8/JqpvJLyNUC.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
             </div>
         
             <img id="locationImage" src="" alt="Location Image" />
-
-            <button id="prevButton" class="arrow-button" onclick="showPreviousImage()">
-                <i class="fas fa-arrow-left"></i> <!-- Left arrow icon -->
+            <!--
+             <button id="prevButton" class="arrow-button" onclick="showPreviousImage()">
+                <i class="fas fa-arrow-left"></i> 
             </button>
             <button id="nextButton" class="arrow-button" onclick="showNextImage()">
-                <i class="fas fa-arrow-right"></i> <!-- Right arrow icon -->
+                <i class="fas fa-arrow-right"></i> 
             </button>
+            -->
+           
         </div>
+           
+     
+       
             
 
         </div>
